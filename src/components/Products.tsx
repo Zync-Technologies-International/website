@@ -32,7 +32,7 @@ const products: Product[] = [
     code: "GATE-S",
     name: "Speed Gate",
     market: "Aviation & Healthcare",
-    text: "RFID-controlled speed gate for secure, high-throughput access to restricted areas.",
+    text: "RFID speed gate that controls access to restricted areas.",
     icon: ScanLine,
     tone: "primary",
   },
@@ -44,11 +44,10 @@ export default function Products() {
       <Reveal className="max-w-2xl">
         <p className="eyebrow text-primary-soft">Products</p>
         <h2 id="products-heading" className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-fg sm:text-5xl">
-          One platform, three kits.
+          Three products, one cloud dashboard.
         </h2>
         <p className="mt-4 text-muted">
-          Every kit ships with Zync's edge controller and runs on the same cloud dashboard, so you can start with one
-          use case and add the next without a new vendor.
+          All three use Zync's edge controller and the same dashboard. You can start with one and add another later.
         </p>
       </Reveal>
 

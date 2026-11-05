@@ -3,7 +3,7 @@ import type { FormEvent } from "react";
 import { CheckCircle2, CircleAlert, LoaderCircle, MapPin, Send, Waypoints } from "lucide-react";
 import Reveal from "./Reveal";
 
-const facilityTypes = ["Airport", "Ground handler", "Hospital", "Corporate campus", "Other"];
+const facilityTypes = ["Airport", "Hospital", "Other"];
 
 type Errors = Partial<Record<"name" | "facility" | "email", string>>;
 type Status = "idle" | "sending" | "sent";
@@ -56,7 +56,7 @@ export default function Footer() {
               Ready to upgrade your <span className="text-gradient">facility's flow?</span>
             </h2>
             <p className="mt-5 max-w-md text-muted">
-              Tell us about your airport, hospital or campus. We'll come back with a lane-by-lane HaaS proposal.
+              Tell us about your airport or hospital. We'll reply with a proposal priced per lane.
             </p>
           </Reveal>
 
@@ -65,8 +65,8 @@ export default function Footer() {
               {status === "sent" ? (
                 <div role="status" className="flex flex-col items-center py-10 text-center">
                   <CheckCircle2 aria-hidden="true" className="h-12 w-12 text-accent" />
-                  <p className="mt-4 text-xl font-bold text-fg">Thanks, we'll be in touch.</p>
-                  <p className="mt-1 text-sm text-muted">Our sales team will reply to your email shortly.</p>
+                  <p className="mt-4 text-xl font-bold text-fg">Thanks for getting in touch.</p>
+                  <p className="mt-1 text-sm text-muted">Our sales team will reply to your email.</p>
                 </div>
               ) : (
                 <form ref={formRef} onSubmit={onSubmit} noValidate className="space-y-5">

@@ -4,23 +4,23 @@ import Reveal from "./Reveal";
 const faqs = [
   {
     q: "What is included in the monthly fee?",
-    a: "The hardware, the cloud software and an active SLA. You pay a one-time setup fee per lane, then a flat monthly fee per lane.",
+    a: "The hardware, the cloud software and an active SLA. You pay a one-time setup fee per lane, then a monthly fee per lane.",
   },
   {
-    q: "Which standards do you support for baggage tracking?",
-    a: "BAG-KIT is designed for IATA Resolution 753 baggage reconciliation, with five read points from check-in to arrival.",
+    q: "Which baggage tracking standard do you support?",
+    a: "BAG-KIT supports IATA Resolution 753, with five read points from check-in to arrival.",
   },
   {
     q: "How does it connect to our existing systems?",
-    a: "Through the Zync cloud dashboard. We integrate with your hospital management system (HMS) or your airline messaging systems, so you don't build middleware yourself.",
+    a: "Through the Zync cloud dashboard, which connects to your hospital management system (HMS) or your airline messaging systems.",
   },
   {
-    q: "Where is the hardware made and engineered?",
-    a: "Mechanical hardware is sourced from trusted OEMs in Coimbatore and China. Firmware, edge-controller integration, QA and the cloud platform are built in Kerala, India.",
+    q: "Where is the hardware made?",
+    a: "Zync buys the mechanical hardware from OEMs in Coimbatore and China. Firmware flashing, edge-controller PCB integration and QA happen at our Kerala hub, where we also build the cloud dashboard.",
   },
   {
     q: "What happens when hardware ages or fails?",
-    a: "Hardware stays on Zync's books and is replaced as part of your subscription, so you never carry obsolescence risk.",
+    a: "Zync owns the hardware and replaces it under your subscription.",
   },
 ];
 
@@ -30,7 +30,7 @@ export default function Faq() {
       <Reveal className="text-center">
         <p className="eyebrow text-primary-soft">FAQ</p>
         <h2 id="faq-heading" className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-fg sm:text-4xl">
-          Questions procurement will ask
+          Common questions
         </h2>
       </Reveal>
 

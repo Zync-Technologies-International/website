@@ -2,15 +2,15 @@ import { AlertTriangle, CheckCircle2, CloudCog, DollarSign, RefreshCcw, Unplug, 
 import Reveal from "./Reveal";
 
 const oldWay = [
-  { icon: DollarSign, title: "$100k+ upfront capex", text: "Legacy vendors demand a massive cheque before a single bag or visitor is tracked." },
-  { icon: Unplug, title: "Complex integrations", text: "Months of custom middleware to reach your HMS, DCS or airline messaging stack." },
-  { icon: Wrench, title: "Hardware obsolescence", text: "You own aging readers and gates, and you pay again to replace them." },
+  { icon: DollarSign, title: "$100k+ upfront capex", text: "Legacy vendors want the full amount before a single bag or visitor is tracked." },
+  { icon: Unplug, title: "Complex integrations", text: "Each connection to your HMS or airline messaging system is its own integration project." },
+  { icon: Wrench, title: "Hardware obsolescence", text: "You own the readers and gates, so replacing them when they age is your cost." },
 ];
 
 const zyncWay = [
-  { icon: CheckCircle2, title: "Zero upfront hardware cost", text: "A small setup fee, then one predictable monthly fee. No capex approval cycle." },
-  { icon: CloudCog, title: "Pay-per-lane, cloud-integrated", text: "Add lanes as you grow. Our cloud connects to your HMS or airline systems." },
-  { icon: RefreshCcw, title: "Lifetime hardware replacement", text: "Hardware, software and spares stay on our books and are refreshed for you." },
+  { icon: CheckCircle2, title: "Zero upfront hardware cost", text: "You pay a setup fee per lane and a monthly fee after that. There is no hardware purchase to approve." },
+  { icon: CloudCog, title: "Pay per lane, integrated via the cloud", text: "You add lanes as you need them. Our cloud connects to your HMS or airline systems." },
+  { icon: RefreshCcw, title: "Lifetime hardware replacement", text: "Zync owns the hardware and replaces it when it fails or ages." },
 ];
 
 export default function ProblemSolution() {
@@ -19,7 +19,7 @@ export default function ProblemSolution() {
       <Reveal className="mx-auto max-w-3xl text-center">
         <p className="eyebrow text-primary-soft">The shift</p>
         <h2 id="shift-heading" className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-fg sm:text-5xl">
-          Stop buying infrastructure. Start subscribing to outcomes.
+          Pay per lane instead of buying the hardware.
         </h2>
       </Reveal>
 

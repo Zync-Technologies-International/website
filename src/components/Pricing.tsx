@@ -16,9 +16,9 @@ const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
 const compareRows = [
   { label: "Upfront cost per lane", capex: usd(CAPEX_PRICE), haas: `${usd(SETUP)} setup` },
   { label: "Recurring cost per lane", capex: "Maintenance, billed extra", haas: `${usd(MONTHLY)} / month, all-in` },
-  { label: "Hardware ownership & replacement", capex: "You own and replace it", haas: "Zync-owned, replaced for you" },
-  { label: "Cloud software", capex: "Priced separately", haas: "Included" },
-  { label: "Active SLA", capex: "Priced separately", haas: "Included" },
+  { label: "Hardware ownership and replacement", capex: "You own it and replace it", haas: "Zync owns it and replaces it" },
+  { label: "Cloud software", capex: "Depends on the vendor", haas: "Included" },
+  { label: "Active SLA", capex: "Depends on the vendor", haas: "Included" },
 ] as const;
 
 export default function Pricing() {
@@ -30,7 +30,7 @@ export default function Pricing() {
       <Reveal className="mx-auto max-w-3xl text-center">
         <p className="eyebrow text-accent-soft">HaaS economics</p>
         <h2 id="pricing-heading" className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-fg sm:text-5xl">
-          GATE-S Speed Gate: two ways to own it.
+          What a GATE-S lane costs: buy it or subscribe.
         </h2>
       </Reveal>
 
@@ -142,11 +142,11 @@ export default function Pricing() {
                   </p>
                   <dl className="mt-8 space-y-4 text-sm">
                     <Row label={`${lanes} × GATE-S @ ${usd(CAPEX_PRICE)}`} value={usd(CAPEX_PRICE * lanes)} />
-                    <Row label="Maintenance & software" value="Extra, on top" soft />
-                    <Row label="Integration & obsolescence risk" value="Yours" soft />
+                    <Row label="Maintenance" value="Billed extra" soft />
+                    <Row label="Integration and obsolescence risk" value="You carry it" soft />
                   </dl>
                   <p className="mt-8 flex items-center gap-2 text-sm text-muted">
-                    <Minus aria-hidden="true" className="h-4 w-4" /> Cash leaves your balance sheet on day one.
+                    <Minus aria-hidden="true" className="h-4 w-4" /> You pay the full hardware price on day one.
                   </p>
                 </motion.div>
               ) : (

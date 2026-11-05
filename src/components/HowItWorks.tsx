@@ -38,7 +38,6 @@ export default function HowItWorks() {
           <h2 id="how-heading" className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-fg sm:text-5xl">
             The Integration Bridge
           </h2>
-          <p className="mt-4 text-muted">Commodity hardware in, proprietary intelligence added, a running system out.</p>
         </Reveal>
 
         <div className="relative mt-16">

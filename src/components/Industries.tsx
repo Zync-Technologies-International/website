@@ -18,11 +18,7 @@ const industries: Industry[] = [
     text: "IATA R753 compliant baggage reconciliation. 5 critical read points from check-in to arrival.",
     accent: "primary",
     icons: [Luggage, PlaneTakeoff, Briefcase],
-    points: [
-      "Five read points, check-in through arrival",
-      "Messaging into airline and airport systems",
-      "Built for mid-tier airports",
-    ],
+    points: ["Built for mid-tier airports", "Sends data to airline systems through the Zync cloud"],
   },
   {
     tag: "MED-KIT & Access",
@@ -30,11 +26,7 @@ const industries: Industry[] = [
     text: "Real-time tracking for expensive mobile assets (wheelchairs, scanners) and secure access gates for restricted hospital wings.",
     accent: "accent",
     icons: [HeartPulse, Stethoscope, Activity],
-    points: [
-      "Live location of wheelchairs and scanners",
-      "Secure gates for restricted wings",
-      "Connects to your HMS through our cloud",
-    ],
+    points: ["Connects to your HMS through the Zync cloud", "Gates limit entry to restricted wings"],
   },
 ];
 
@@ -59,7 +51,7 @@ export default function Industries() {
       <Reveal className="max-w-2xl">
         <p className="eyebrow text-accent-soft">Industries we serve</p>
         <h2 id="industries-heading" className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-fg sm:text-5xl">
-          Where every second and every asset counts.
+          Built for airports and hospitals.
         </h2>
       </Reveal>
 
@@ -96,7 +88,7 @@ export default function Industries() {
                   href="#contact"
                   className="group mt-auto inline-flex min-h-11 items-center gap-2 pt-7 text-sm font-semibold text-fg transition-colors hover:text-primary-soft"
                 >
-                  Request a {ind.title.toLowerCase()} demo
+                  Book {ind.title === "Aviation" ? "an aviation" : "a medical"} demo
                   <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </article>
