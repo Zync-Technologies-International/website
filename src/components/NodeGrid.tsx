@@ -6,7 +6,7 @@ type Node = { id: number; x: number; y: number; delay: number; hub: boolean };
 const COLS = 7;
 const ROWS = 5;
 
-/** Animated grid of RFID nodes that "ping" and link to a central hub. */
+/** Decorative grid of RFID nodes that "ping" and link to a central hub. */
 export default function NodeGrid() {
   const nodes = useMemo<Node[]>(() => {
     const list: Node[] = [];
@@ -30,8 +30,13 @@ export default function NodeGrid() {
   const hub = nodes.find((n) => n.hub)!;
 
   return (
-    <div className="glass relative mx-auto aspect-[7/5] w-full max-w-xl overflow-hidden rounded-3xl p-2 shadow-[0_0_80px_-20px_rgba(34,211,238,0.35)]">
-      <svg viewBox="0 0 500 360" className="h-full w-full" role="img" aria-label="Animated RFID nodes syncing with a central hub">
+    <div className="glass relative mx-auto aspect-[7/5] w-full max-w-xl overflow-hidden rounded-3xl p-2 shadow-[0_0_80px_-20px_rgb(34_211_238/0.35)]">
+      <svg
+        viewBox="0 0 500 360"
+        className="h-full w-full"
+        role="img"
+        aria-label="Illustration: a grid of RFID nodes pinging and syncing to one central cloud hub"
+      >
         <defs>
           <radialGradient id="hubGlow">
             <stop offset="0%" stopColor="#22d3ee" stopOpacity="0.6" />
@@ -39,7 +44,7 @@ export default function NodeGrid() {
           </radialGradient>
           <linearGradient id="line" x1="0" x2="1">
             <stop offset="0%" stopColor="#22d3ee" />
-            <stop offset="100%" stopColor="#10b981" />
+            <stop offset="100%" stopColor="#34d399" />
           </linearGradient>
         </defs>
 
@@ -83,16 +88,16 @@ export default function NodeGrid() {
               cx={n.x}
               cy={n.y}
               r={n.hub ? 9 : 3}
-              fill={n.hub ? "#10b981" : "#67e8f9"}
-              style={n.hub ? { filter: "drop-shadow(0 0 10px #10b981)" } : undefined}
+              fill={n.hub ? "#34d399" : "#67e8f9"}
+              style={n.hub ? { filter: "drop-shadow(0 0 10px #34d399)" } : undefined}
             />
           </g>
         ))}
       </svg>
 
-      <div className="pointer-events-none absolute bottom-4 left-4 flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">
-        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
-        35 nodes synced
+      <div className="pointer-events-none absolute bottom-4 left-4 flex items-center gap-2 rounded-full border border-accent/30 bg-bg/70 px-3 py-1.5 font-mono text-xs font-medium text-accent-soft backdrop-blur">
+        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
+        35 nodes · synced
       </div>
     </div>
   );
